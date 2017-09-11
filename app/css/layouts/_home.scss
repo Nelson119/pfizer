@@ -1,0 +1,22 @@
+[role="main"].home {
+    z-index: -1;
+    @media screen and (max-width: #{$screen-sm - 1}) {
+        height: 60vh;
+        position: relative;
+    }
+    .background {
+        @include SubItem();
+        background: center/cover;
+        transition-duration: 0s;
+        filter: none;
+        opacity: 1!important;
+        @media screen and (max-width: #{$screen-sm - 1}) {
+            position: relative;
+            background-attachment: scroll;
+            background-size: 100% auto;
+            background-position: center top;
+            filter: none;
+            opacity: 1!important;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "frontend-template",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.1",
+    "font-awesome": "fontawesome#^4.6.3",
+    "detectizr": "^2.2.0",
+    "bootstrap": "v4.0.0-alpha.6",
+    "lightgallery": "^1.5.0",
+    "jquery-TWzipcode-i18n": "*",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "gsap": "^1.20.2"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "scss/bootstrap-reboot.scss",
+        "scss/bootstrap.scss",
+        "scss/bootstrap-grid.scss",
+        "dist/js/bootstrap.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "less/font-awesome.less",
+        "scss/font-awesome.scss",
+        "fonts/*"
+      ]
+    },
+    "lightgallery": {
+      "main": [
+        "dist/js/lightgallery-all.min.js",
+        "dist/css/lightgallery.css",
+        "dist/fonts/lg.eot",
+        "dist/fonts/lg.svg",
+        "dist/fonts/lg.ttf",
+        "dist/fonts/lg.woff",
+        "dist/img/loading.gif",
+        "dist/img/video-play.png",
+        "dist/img/vimeo-play.png",
+        "dist/img/youtube-play.png"
+      ]
+    },
+    "jquery-TWzipcode": {
+      "main": [
+        "jquery.twzipcode.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    "bootstrap": "4"
+  }
+}

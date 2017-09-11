@@ -1,0 +1,26 @@
+.statistics[role="main"] {
+    position: relative;
+    padding-top: 1px;
+    margin-top: -1px;
+    background: #fff;
+    .c{
+        overflow: auto;
+        text-align: center;
+        @media screen and (max-width: #{$screen-sm - 1}) {
+            overflow: hidden;
+            padding-bottom:3rem;
+        }
+    }
+    article{
+        display: inline-block;
+        padding: 1em;
+        figure{
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+    @media screen and (max-width: #{$screen-sm - 1}) {
+        height: auto;
+    }
+}

@@ -1,0 +1,51 @@
+@@include('../layouts/front.html', { 
+    "meta": { 
+        "title": "性福第一步 | 性福在此一舉", 
+        "description": "醫院門診諮詢地圖", 
+        "image": "img/1200x630.jpg" 
+    } 
+})
+<section class="map" role="main">
+    <figure class="background hidden-xs" data-src="../img/bg.jpg"></figure>
+    <figure class="background visible-xs" data-src="../img/bg_mobile.jpg"></figure>
+    <figure class="marker" data-src="../img/marker.png"></figure>
+    <h2 class="vertical-middle">性福第一步<span>請至各醫院門診諮詢專科醫師<br>或至各大藥局索取性福藍皮書</span></h2>
+
+    <section class="content">
+        <aside class="map-wrap">
+            <h3 class="text-center">醫院門診諮詢地圖</h3>
+            <form class="search-form" method="POST">
+                <div id="twzipcode" class="row">
+                    <div data-ga="Info-map-city" data-role="county" data-name="county" class="select col-lg-3 offset-lg-2" data-style="form-control" data-value="台北市"></div>
+                    <div data-ga="Info-map-area" data-role="district" data-name="district" class="select col-lg-3" data-style="form-control" data-value="內湖區"></div>
+                    <div class="col-lg-2">
+                        <button class="form-control" data-ga="Info-map-search">搜尋</button>
+                    </div>
+                </div>
+
+            </form>
+            <hr>
+            <aside class="map-canvas hidden-xs-down">
+                <div id="map"></div>
+            </aside>
+            <aside class="branches hidden-md-up">
+                <ul>
+                    <li class="br tpl">
+                        <h3></h3>
+                        <p class="tel"></p>
+                        <p class="addr"></p>
+                    </li>
+                </ul>
+            </aside>
+            <nav class="share">
+                <a class="facebook" data-ga="share-info-map-fb" href="javascript:app.utility.share.facebook('http://www.behard.com.tw/map/','性福第一步 | 性福在此一舉')">
+                    <figure data-src="@@webRoot/img/icon-facebook.png"></figure>
+                </a><a class="line" data-ga="share-info-map-line" href="javascript:app.utility.share.line('http://www.behard.com.tw/map/','性福第一步 | 性福在此一舉')">
+                    <figure data-src="@@webRoot/img/icon-line.png"></figure>
+                </a>
+            </nav>
+        </aside>
+    </section>
+
+</section>
+@@include('../layouts/butt.html', { "nav": { "map": "active" } })

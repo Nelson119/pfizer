@@ -1,0 +1,49 @@
+.distinguish[role="main"] {
+    position: relative;
+    padding-top: 1px;
+    margin-top: -1px;
+    background: #fff;
+    .c{
+        overflow: auto;
+        @media screen and (max-width: #{$screen-sm - 1}) {
+            overflow: hidden;
+            padding-bottom:3rem;
+        }
+    }
+    article{
+        padding: 1em;
+        figure{
+            >aside{
+                display: inline-block;
+            }
+            aside{
+                position: relative;
+                margin-top: 1em;
+            }
+            img{
+                max-width: 100%;
+
+            }
+        }
+        nav{
+            letter-spacing: 1.5em;
+        }
+        a{
+            display: inline-block;
+            color: #1E93CE;
+            letter-spacing: 0;
+            &:before{
+                color: #139ddc;
+                margin-right: 0.3em;
+            }
+            span{
+                text-decoration: underline;
+            }
+            &+a{
+            }
+        }
+    }
+    @media screen and (max-width: #{$screen-sm - 1}) {
+        height: auto;
+    }
+}

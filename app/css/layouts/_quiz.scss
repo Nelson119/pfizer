@@ -1,0 +1,435 @@
+.quiz[role="main"] {
+    position: relative;
+    padding-top: 1px;
+    margin-top: -1px;
+    background: #fff;
+    @media screen and (max-width: #{$screen-sm - 1}) {
+        height: auto;
+    }
+    h2{
+        font-size: 2.5vw;
+        top: 85px;
+        span{
+            padding-top: 0.25em;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+        @media screen and (max-width: #{$screen-md - 1}) {
+            top: 0.3em;
+            margin-left: 0.5em;
+            font-size: 2rem;
+            span{
+                padding-top: 0.5em;
+                display: inline-block;
+                vertical-align: bottom;
+            }
+        }
+        @media screen and (max-width: #{$screen-sm - 1}) {
+            height: 1.5em;
+            span{
+                padding-top: 0;
+                margin: 0;
+
+                display: block;
+                
+            }
+        }
+    }
+    .content {
+        height: calc(100% - 150px);
+        @media screen and (max-width: #{$screen-md - 1}) {
+            height: calc(100% - 200px);
+        }
+        .c{
+            @media screen and (max-width: #{$screen-sm - 1}) {
+                // overflow: hidden;
+                padding-bottom:3rem;
+            }
+        }
+    }
+    .quiz {
+        background: #fff;
+        text-align: center;
+        font-size: 2vh;
+        @media screen and (max-width: #{$screen-sm - 1}) {
+            font-size: 1rem;
+        }
+        height: 100%;
+        article {
+            width: 35em;
+            @media screen and (max-width: #{$screen-md - 1}) {
+                width: 90%;
+                font-size: 1.1vw;
+            }
+            @media screen and (max-width: #{$screen-sm - 1}) {
+                font-size: 1rem;
+                width: 100%;
+                padding-bottom: 2em;
+                position: relative;
+            }
+        }
+        h3 {
+            padding-bottom: 0.5em;
+            border-bottom: 1px solid #d8d8d8;
+            margin: 0 auto 0.5em;
+            sup {
+                top: 0;
+                font-size: 1rem;
+                color: #000;
+                font-weight: normal;
+                color: #d0d0d0;
+            }
+        }
+        h4 {
+            font-size: 2em;
+            color: #139ddc;
+            margin-top: 1.2em;
+            margin-bottom: 0.4em;
+        }
+        p {
+            margin: 0 auto 0.3em;
+            font-size: 1.1em;
+            @media screen and (max-width: #{$screen-sm - 1}) {
+                padding: 0 1em;
+            }
+            &.s {
+                font-size: 1em;
+            }
+        }
+        figure {
+            height: 15em;
+            width: 25em;
+            margin: 0 auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            &.h {
+                background-size: auto 100%;
+            }
+            @media screen and (max-width: #{$screen-sm - 1}) {
+                max-width: 100%;
+            }
+        }
+        .options {
+            display: inline;
+            ul {
+                margin-top: 3em;
+            }
+            input {
+                display: none;
+            }
+            label {
+                line-height: 1.2em;
+                vertical-align: top;
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 1.2em;
+                    height: 1.2em;
+                    background: url(../img/unchecked.png) center/100% auto no-repeat;
+                    margin-right: 0.25em;
+                    height: 1.4em;
+                }
+                span{
+                    display: inline-block;
+                    height: 100%;
+                    line-height: 1.2em;
+                    vertical-align: top;
+                }
+            }
+            input:checked~label:before {
+                background-image: url(../img/checked.png);
+            }
+        }
+        .buttons {
+            button, a.btn {
+                cursor: pointer;
+                background-color: #139ddc;
+                border-color: #139ddc;
+                border-style: solid;
+                font-size: 1.4em;
+                width: 12em;
+                line-height: 2em;
+                color: #fff;
+                font-weight: 500;
+                text-decoration: none;
+                border-radius: 0;
+                border-width: 2px;
+                margin-top: 0;
+                padding: 0.1em;
+                @media screen and (max-width: #{$screen-md - 1}) {
+                    width: 10em;
+                    float: none;
+                    display: block;
+                    width: 100%;
+                    &+button {
+                        margin-top: 1em;
+                    }
+                }
+                &:focus {
+                    outline: none;
+                }
+                &:focus:active {
+                    outline: none;
+                    background: none;
+                    color: #139ddc;
+                }
+                label {
+                    margin-bottom: 0;
+                    cursor: pointer;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        a {
+            color: #000;
+            text-decoration: underline;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-top: 1.5em;
+            display: inline-block;
+            label {
+                cursor: pointer;
+            }
+        }
+        >[type="radio"] {
+            display: none;
+        }
+    }
+    #chkED:checked~#ED{
+        height: 100%;
+        @include animation( fade-in 0.3s 1 linear forwards 0s);
+    }
+    #chkED:checked~.close-ed {
+        @include animation( fade-in 0.3s 1 linear forwards 0s);
+    }
+    #ED {
+        @include SubItem();
+        overflow: auto;
+        background: #fff;
+        padding: 0.6rem 2rem;
+        letter-spacing: 1px;
+        -webkit-overflow-scrolling: touch;
+        height: 0;
+        @include animation( fade-out 0.2s 1 linear forwards 0s);
+        h3 {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 2em;
+        }
+        p {
+            margin-bottom: 2em;
+        }
+        ul {
+            margin-bottom: 1.5em;
+        }
+        li {
+            position: relative;
+            b {
+                display: inline-block;
+                height: 100%;
+            }
+            aside {
+                display: inline-block;
+                margin-left: 1em;
+                max-width: 85%;
+                max-width: calc(100% - 5em);
+                p {
+                    margin-bottom: 0.1em;
+                }
+            }
+            @media screen and (max-width: #{$screen-sm - 1}) {
+                padding: 1em 0;
+                &+li{
+                    border-top: 1px solid #e0e0e0;
+                }
+            }
+        }
+        &[data-font-size=sm] {
+            font-size: 1em;
+            font-size: 1rem;
+        }
+        &[data-font-size=md] {
+            font-size: 1.2em;
+            font-size: 1.2rem;
+        }
+        &[data-font-size=lg] {
+            font-size: 1.4em;
+            font-size: 1.4rem;
+        }
+    }
+    .close-ed {
+        color: #fff;
+        background-color: #139ddc;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        width: 2em;
+        height: 2em;
+        top: -1em;
+        right: -0.8em;
+        width: 2rem;
+        height: 2rem;
+        top: -1rem;
+        right: -0.8rem;
+        line-height: 1.8em;
+        text-align: center;
+        label {
+            cursor: pointer;
+        }
+        @include animation( fade-out 0.2s 1 linear forwards 0s);
+    }
+    .step {
+        height: 100%;
+        overflow: auto;
+        >aside {
+            width: 99%;
+        }
+        @media screen and (max-width: #{$screen-sm - 1}) {
+            height: auto;
+        }
+        @include animation( step-out 0.2s 1 linear forwards 0s);
+    }
+    #quiz1:checked~.step.quiz1,
+    #quiz1result:checked~.step.quiz1-result,
+    #quiz2page1:checked~.step.quiz2-page1,
+    #quiz2page2:checked~.step.quiz2-page2,
+    #quiz2result:checked~.step.quiz2-result {
+        @include animation( step-in 0.3s 1 linear forwards 0s);
+    }
+    nav.article-fontsize {
+        position: absolute;
+        top: 2rem;
+        right: 4rem;
+        @media screen and (max-width: #{$screen-sm - 1}) {
+            right: 0.5rem;
+            top: 0.5rem;
+            line-height: 1.8rem;
+        }
+        a {
+            border: 1px solid #767676;
+            width: 1.8rem;
+            height: 1.8rem;
+            font-size: 1.2rem;
+            text-align: center;
+            color: #767676;
+            &:hover,
+            &.active {
+                background: #767676;
+                color: #fff;
+            }
+        }
+    }
+    .quiz1-result {
+        article {
+            &.hide {
+                display: none;
+            }
+        }
+    }
+    .quiz1 {
+        article {
+            padding: 1em;
+        }
+    }
+    .quiz1-result {
+        article {
+            padding: 1em;
+        }
+    }
+    .quiz2-page1,
+    .quiz2-page2,
+    .quiz2-result {
+        >aside {
+            padding: 1em;
+            max-width: 95%;
+        }
+        .t {
+            margin: 0 0 2em 2em;
+        }
+        .buttons{
+            margin-top: 3em;
+        }
+        .result{
+            display: none;
+            &.on{
+                display: block;
+            }
+        }
+    }
+    .quiz2-result {
+        h4 {
+            font-size: 4em;
+            margin: 0.5em;
+        }
+        .buttons{
+            line-height: 4.5em;
+        }
+    }
+}
+
+@include keyframes ( step-in) {
+    from {
+        top: 0;
+        z-index: 21;
+        opacity: 0;
+        height: 100%;
+    }
+    to {
+        top: 0;
+        height: 100%;
+        z-index: 21;
+        opacity: 1;
+    }
+}
+
+@include keyframes ( step-out) {
+    from {
+        z-index: 21;
+        opacity: 21;
+        height: 100%;
+        top: 0;
+    }
+    99% {
+        top: 0;
+        z-index: 21;
+        opacity: 0;
+        height: 100%;
+    }
+    to {
+        top: -999em;
+        z-index: -20!important;
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@include keyframes ( fade-in) {
+    from {
+        z-index: 21;
+        opacity: 0;
+    }
+    to {
+        z-index: 21;
+        opacity: 1;
+    }
+}
+
+@include keyframes ( fade-out) {
+    from {
+        z-index: 21;
+        opacity: 21;
+    }
+    99% {
+        z-index: 21;
+        opacity: 0;
+        height: auto;
+    }
+    to {
+        z-index: -20!important;
+        opacity: 0;
+        height: 0;
+    }
+}

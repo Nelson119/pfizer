@@ -1,0 +1,207 @@
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+figure {
+    margin: 0;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "liga";
+    font-style: normal;
+    text-rendering: optimizelegibility;
+    letter-spacing: 0.5px;
+    word-spacing: 0.5px;
+    overflow-x: hidden;
+    color: $font-default-color;
+    position: relative;
+    [role="main"] {
+        width: 100vw;
+        height: 100vh;
+        .background {
+            @include SubItem();
+            background: center/cover;
+            transition-duration: 0s;
+            filter: blur(7px);
+            opacity: 0.8;
+            @media screen and (max-width: #{$screen-sm - 1}) {
+                position: fixed;
+                background-attachment: scroll;
+                background-size: 100% auto;
+                background-position: center top;
+                filter: none;
+            }
+        }
+        h2 {
+            z-index: 0;
+            position: relative;
+            top: 110px;
+            height: 1.8em;
+            line-height: 1.8em;
+            border-left: 1px solid #000;
+            padding-left: 0.5em;
+            font-size: 3.5vw;
+            color: #fff;
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+            margin-top: -1.6em;
+            margin-left: 388px;
+            span {
+                font-size: 0.4em;
+                line-height: 1.3;
+                height: 3em;
+                font-weight: bold;
+                color: #000;
+                text-shadow: none;
+                margin-left: 0.5em;
+                @media screen and (max-width: #{$screen-sm - 1}) {
+                    margin-left: 1em;
+                }
+            }
+            @media screen and (max-width: #{$screen-md - 1}) {
+                border: 0;
+                @include Item('auto', 'auto', 120, 0, 0, 10, 1920, 'none');
+            }
+            @media screen and (max-width: #{$screen-sm - 1}) {
+                margin-top: 17%;
+                margin-top: 17vw;
+                margin-top: calc(16vw + 0.25em);
+                margin-left: 0;
+                width: 100%;
+                height: 4em;
+                font-size: 8vw;
+                border: 0;
+            }
+        }
+        h3 {
+            font-size: 3vw;
+            margin-top: 0.9em;
+            margin: 0.8em auto;
+            color: #139ddc;
+            @media screen and (max-width: #{$screen-sm - 1}) {
+                font-size: 1.4em;
+            }
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            width: calc(100% - 428px);
+            width: calc(100vw - 428px);
+            height: calc(100% - 120px);
+            margin-top: 110px;
+            padding: 2.2em 2em 0;
+            @media screen and (max-width: #{$screen-md - 1}) {
+                margin-top: 170px;
+                height: calc(100% - 120px - 4em);
+            }
+            @media screen and (max-width: #{$screen-sm - 1}) {
+                width: 100%;
+                height: auto;
+                padding: 0 0.8em 2em;
+                margin-top: 48vw;
+            }
+            .c {
+                position: relative;
+                height: 100%;
+                background: #fff;
+            }
+        }
+        .content {
+            height: calc(100% - 150px);
+            @media screen and (max-width: #{$screen-md - 1}) {
+                height: calc(100% - 200px);
+            }
+        }
+    }
+}
+
+html {
+    min-width: 320px;
+    .container {
+        min-width: 320px;
+    }
+    * {
+        transition-duration: 0.15s;
+        &:hover {
+            transition-duration: 0.3s;
+        }
+    }
+
+    a.line {display: none!important;}
+    &.mobile .line{
+        display: inline-block!important;
+    }
+
+    nav.share{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 10vw;
+        width:4vw;
+        letter-spacing: 0;
+        @media screen and (max-width: #{$screen-sm - 1}) {
+            height: 3em;
+            width: 100%;
+            bottom: 0;
+            top: auto;
+        }
+        a{
+            width: 100%;
+            display: block;
+            opacity: 0.75;
+            background-color: #fff;
+            &:hover {
+                opacity: 1;
+                figure {
+                    transform: scale(0.95);
+                }
+            }
+            figure {
+                padding-top: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                @media screen and (max-width: #{$screen-sm - 1}) {
+                    // display: none;
+                    height: 100%;
+                    padding: 0;
+                }
+            }
+            &:nth-child(1) {
+                background: #3b5998;
+            }
+            &:nth-child(2) {
+                background: #2cbf13;
+            }
+            @media screen and (max-width: #{$screen-sm - 1}) {
+                height: 100%;
+                width: 50%;
+                display: inline-block;
+            }
+        }
+
+    }
+}
+
+.hidden-xs {
+    @media screen and (max-width: #{$screen-sm - 1}) {
+        
+        display: none!important;
+    }
+}
+
+.visible-xs {
+    display: none!important;
+    @media screen and (max-width: #{$screen-sm - 1}) {
+        display: block!important;
+    }
+}
+.visible-xs-inline-block {
+    display: none!important;
+    @media screen and (max-width: #{$screen-sm - 1}) {
+        display: inline-block!important;
+    }
+}

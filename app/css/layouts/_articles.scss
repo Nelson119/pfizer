@@ -1,0 +1,355 @@
+.articles[role="main"] {
+    position: relative;
+    padding-top: 1px;
+    margin-top: -1px;
+    background: #fff;
+    h2{
+        line-height: 1em;
+        font-size: 3em;
+        width: 100%;
+        width: calc(100% - 430px);
+        @media screen and (max-width: #{$screen-sm - 1}) {
+            width: 100%;
+        }
+        sup{
+            color: #000;
+            font-size: 0.5em;
+            font-weight: normal;
+            line-height: 1em;
+            display: inline-block;
+            @media screen and (max-width: #{$screen-sm - 1}) {
+                top: 0.25em;
+            }
+        }
+        b{
+            max-width: 90%;
+        }
+    }
+    .content{
+        @media screen and (max-width: #{$screen-sm - 1}) {
+            margin-top: calc(10rem + 20vw);
+        }
+    }
+    .c{
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: transparent!important;
+    }
+    .row {
+        margin-left: -5px;
+        margin-right: -5px;
+        @media screen and (max-width: #{$screen-sm - 1}) {
+            margin: 0;
+        }
+    }
+    .row .grid-container{
+        background: #fff;
+        position: relative;
+        height: 100%;
+        .summary{
+            color: #000;
+        }
+    }
+    .row .video-container{
+        background: #fff;
+        position: relative;
+        height: 100%;
+        h3{
+            font-size: 2rem;
+            color: #139ddc;
+            text-align: left;
+            margin-top: 0;
+        }
+        p{
+            color: #000;
+        }
+        article{
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            .video{
+                height: 73%;
+                margin-left: -1em;
+                margin-right: -1em;
+                display: block;
+                min-height: 15em;
+            }
+            figure{
+                height: 100%;
+                width: 100%;
+                position: relative;
+                background: center /cover;
+                &:before{
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    content:'';
+                    background: url(../img/video-grid.png);
+                    background-size: em(4, 18);
+                }
+                &:after{
+                    content: '';
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: url(../img/play.png) no-repeat center;
+                }
+            }
+        }
+    }
+    .row >aside{
+        padding-bottom: 1em;
+    }
+    .more{
+        color: #dd1537;
+    }
+    .picture{
+        position: relative;
+        img{
+            max-width: 100%;
+                width: 100%;
+        }
+        figcaption{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            vertical-align: top;
+            >aside{
+                margin-top: 1em;
+                max-width: 95%;
+            }
+        }
+        .name{
+            font-size: 1.8em;
+        }
+        .title{
+            font-size: 1.1em;
+        }
+    }
+    .cap{
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #fff;
+        background: #139ddc;
+        padding: 0 1.2em;
+    }
+    article{
+        display: inline-block;
+        padding: 1em;
+        figure{
+            text-align: center;
+            img{
+                max-width: 100%;
+            }
+        }
+        h3{
+            font-size: 1.6em;
+            text-align: center;
+        }
+    }
+    .col-lg-6.col-xl-4{
+        -ms-flex: 0 0 33.3333333333%;
+        flex: 0 0 33.3333333333%;
+        max-width: 33.3333333333%;
+        padding: 5px;
+        font-size: 1.2rem;
+        font-size: 1vw;
+        @media screen and (max-width: #{1365px}) {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+            font-size: 1.2rem;
+            font-size: 1.3vw;
+        }
+        @media screen and (max-width: #{1024px}) {
+            height: auto;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            font-size: 1.3rem;
+            font-size: 1.2vw;
+        }
+        @media screen and (max-width: #{$screen-sm - 1}) {
+            font-size: 1rem;
+        }
+        a{
+            display: block;
+        }
+    }
+
+    header{
+        background: #fff;
+        height: 11em;
+        @media screen and (max-width: #{$screen-sm - 1}) {
+            height: auto;
+        }
+        .tip{
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #139ddc;
+            color: #fff;
+            padding: 0 1em;
+        }
+        .pic{
+            height: 10em;
+            position: absolute;
+            left: 8em;
+            top: 1em;
+            width: 10em;
+            background-repeat: no-repeat;
+            @media screen and (max-width: #{$screen-sm - 1}) {
+                position: relative;
+                display: block;
+                width:96%;
+                margin:0.2em auto;
+                // left: auto;
+                top: auto;
+            }
+        }
+        .name{
+            height: auto;
+            position: absolute;
+            left: 13.3em;
+            top: 0.5em;
+            width: auto;
+            font-size: 1.5em;
+            background-repeat: no-repeat;
+            font-weight: bold;
+            @media screen and (max-width: #{$screen-sm - 1}) {
+                position: relative;
+                display: block;
+                width:96%;
+                margin:0.2em auto;
+                left: auto;
+                top: auto;
+            }
+            .title{
+                bottom: 0;
+                left:0.2em;
+                font-size: 0.65em;
+                font-weight: normal;
+            }
+        }
+        .bio{
+            height: auto;
+            position: absolute;
+            left: 20em;
+            top: 3.2em;
+            width: auto;
+            font-size: 1em;
+            background-repeat: no-repeat;
+            @media screen and (max-width: #{$screen-sm - 1}) {
+                position: relative;
+                display: block;
+                width:96%;
+                margin:0.2em auto 2em;
+                left: auto;
+                top: auto;
+            }
+        }
+    }
+    article.detail{
+        background: #fff;
+        margin-top: 1rem;
+        position: relative;
+        display: block;
+        min-height: 10rem;
+        height: calc(100% - 12rem);
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 1rem 1rem 3rem;
+        .back{
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            vertical-align: middle;
+            text-align: left;
+            font-size: 1rem;
+            i{
+                height: 2.5rem;
+                width: 2.5rem;
+                line-height: 2.5rem;
+                display: inline-block;
+                vertical-align: middle;
+                text-align: center;
+                background: #139ddc;
+                color: #fff;
+                
+            }
+            span{
+                font-weight: bold;
+                font-size: 0.9em;
+                margin-left: 1em;
+                color: #000;
+            }
+        }
+        nav.article-fontsize {
+            position: absolute;
+            top: 0;
+            right:1rem;
+            line-height: 2.5rem;
+            font-size: 1rem;
+            @media screen and (max-width: #{$screen-sm - 1}) {
+                right: 0.5rem;
+                top: 0.25rem;
+                line-height: 1.8rem;
+            }
+            a {
+                border: 1px solid #767676;
+                width: 1.8rem;
+                height: 1.8rem;
+                line-height: 1.8rem;
+                font-size: 1.2rem;
+                text-align: center;
+                color: #767676;
+                &:hover,
+                &.active {
+                    background: #767676;
+                    color: #fff;
+                }
+            }
+        }
+        &[data-font-size=sm] {
+            font-size: 1em;
+            font-size: 1rem;
+        }
+        &[data-font-size=md] {
+            font-size: 1.2em;
+            font-size: 1.2rem;
+        }
+        &[data-font-size=lg] {
+            font-size: 1.4em;
+            font-size: 1.4rem;
+        }
+        hr{
+            margin-top: 1.5rem;
+            margin-left: -1em;
+            margin-right: -1em;
+        }
+        h3{
+            text-align: left;
+            sup{
+                top:0;
+            }
+        }
+        p.hl{
+            color: #139ddc;
+            margin-bottom: 0.3em;
+            margin-top: 1.6em;
+        }
+    }
+    @media screen and (max-width: #{$screen-sm - 1}) {
+        height: auto;
+    }
+}
