@@ -13,6 +13,14 @@
       "name": "鏡新聞"
     },
     {
+      "url": "https://www.youtube.com/watch?v=CKjSm5ZeehE",
+      "name": "三立 iNEWS 新聞"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=WIhgU_mc05A",
+      "name": "新唐人"
+    },
+    {
       "url": "https://www.youtube.com/watch?v=xL0ch83RAK8",
       "name": "台視新聞"
     },
@@ -29,10 +37,6 @@
       "name": "寰宇新聞"
     },
     {
-      "url": "https://www.youtube.com/watch?v=CKjSm5ZeehE",
-      "name": "三立 iNEWS 新聞"
-    },
-    {
       "url": "https://aka03p.akamaized.net/litv/fet001.smil/playlist.m3u8",
       "name": "非凡新聞",
       "header": "Referer: https://fetfriday.svc.litv.tv/"
@@ -40,6 +44,26 @@
     {
       "url": "https://www.youtube.com/watch?v=dp8PhLsUcFE",
       "name": "Bloomberg Global Financial News"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=w_Ma8oQLmSM",
+      "name": "ABC News"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=WoKKG0l8QsQ",
+      "name": "KBS News"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=f0lYkdA-Gtw",
+      "name": "NHK WORLD-JAPAN"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=4HysYHJ6GkY",
+      "name": "國會頻道１"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=RAP4h3q6_Sg",
+      "name": "國會頻道２"
     }
   ]
 }
