@@ -25,16 +25,20 @@
       "name": "台視新聞"
     },
     {
+      "url": "https://www.youtube.com/watch?v=6KlRR_DGhmI",
+      "name": "公視台語台"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=4Uc00FPs27M",
+      "name": "公共電視"
+    },
+    {
       "url": "https://www.youtube.com/watch?v=UK81GCw1KE8",
       "name": "木棉花馬拉松1"
     },
     {
       "url": "https://www.youtube.com/watch?v=E0JOmRTFGlE",
       "name": "木棉花馬拉松2"
-    },
-    {
-      "url": "https://www.youtube.com/watch?v=4Uc00FPs27M",
-      "name": "公共電視"
     },
     {
       "url": "https://www.ftvnews.com.tw/live/live-video/1/litv-ftv07",
@@ -55,6 +59,14 @@
     {
       "url": "https://www.ftvnews.com.tw/live/live-video/1/4gtv-4gtv003",
       "name": "民視第一台"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=4HysYHJ6GkY",
+      "name": "國會頻道１"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=RAP4h3q6_Sg",
+      "name": "國會頻道２"
     },
     {
       "url": "https://www.youtube.com/user/57ETFN/live",
@@ -84,14 +96,6 @@
     {
       "url": "https://www.youtube.com/watch?v=f0lYkdA-Gtw",
       "name": "NHK WORLD-JAPAN"
-    },
-    {
-      "url": "https://www.youtube.com/watch?v=4HysYHJ6GkY",
-      "name": "國會頻道１"
-    },
-    {
-      "url": "https://www.youtube.com/watch?v=RAP4h3q6_Sg",
-      "name": "國會頻道２"
     }
   ]
 }
